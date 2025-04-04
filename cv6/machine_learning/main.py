@@ -36,7 +36,7 @@ def initialize_models_and_params():
     return models, param_grids
 
 
-def run_experiment(dataset, models, param_grids, logger):
+def run_experiment(dataset, models, param_grids, n_replication, logger):
     """
     Runs the experiment with the given dataset, models, and hyperparameter grids.
 
@@ -51,7 +51,7 @@ def run_experiment(dataset, models, param_grids, logger):
     - results: DataFrame, the results of the experiment.
     """
     logger.info("Starting the experiment...")
-    experiment = Experiment(models, param_grids, logger=logger)
+    experiment = Experiment(models, param_grids, n_replication,logger=logger)
     results = experiment.run(dataset.data, dataset.target)
     logger.info("Experiment completed successfully.")
     return experiment, results
@@ -92,7 +92,7 @@ def main():
 
     dataset = DatasetRefactored()
     models, param_grids = initialize_models_and_params()
-    experiment, results = run_experiment(dataset, models, param_grids, logger)
+    experiment, results = run_experiment(dataset, models, param_grids, 30, logger)
     plot_results(experiment, results, logger)
 
     logger.info("Application finished successfully.")

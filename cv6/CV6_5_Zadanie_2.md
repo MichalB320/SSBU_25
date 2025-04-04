@@ -35,7 +35,12 @@ Do implementácie pridajte ukladanie všetkých grafov, ktoré sa vytvárajú pr
 
 **V skripte `main.py`** nastavte počet replikácií na vyššie číslo (rozumne, podľa vlastného uváženia). Vykonajte beh aplikácie s Vašou implementáciou. Po skončení behu zanalyzujte vygenerované grafy a pár vetami popíšte ich interpretáciu. (Napr. v čom je ktorý ML model lepší, a pod.)
 
-#TODO - Interpretácia
+grafy hustoty ukazuju ze metriky Precision, F1 score, Accuracy ma lepsi model SVM ako logicka regresia a na roc_auc to je rovnake,
+priemerna presnost accurac je lepsia v modeli SVM (0,98),
+priemerna presnost precision je lepsia v modeli Logistic Regresion (0,97)
+
+v modeli SVM sa chyba typu I. trosku zvysila oproti modelu Logistic Regresion ale chyba typu II. sa znizila
+oba modely maju dobru presnot a vsak ked je chyba typu II. mensia pri modeli SVM je asi lepsi.
 
 **Odovzdávanie riešenia:** Ako súčasť riešenia zahrňte okrem odpovedí na otázky aj skripty s Vašou implementáciou, vygenerované logy a grafy (všetko môžete dať na Github).
 

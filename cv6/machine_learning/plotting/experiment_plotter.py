@@ -30,7 +30,7 @@ class ExperimentPlotter(BasePlotter):
                 ylabel='Density',
                 figsize=(10, 6)
             )
-            filename = f"output/density{metric.title()}.png"
+            filename = f"outputs/density{metric.title()}.png"
             plt.savefig(filename)
             plt.close()
 
@@ -59,7 +59,7 @@ class ExperimentPlotter(BasePlotter):
             ylabel=metric_name,
             figsize=(10, 5)
         )
-        filename = f"output/{title.lower().replace(" ", "_")}.png"
+        filename = f"outputs/{title.lower().replace(" ", "_")}.png"
         plt.savefig(filename)
         plt.close()
 
@@ -83,7 +83,7 @@ class ExperimentPlotter(BasePlotter):
                 ylabel='True label',
                 figsize=(6, 5)
             )
-            filename = f"output/confusion_matrix_{model_name.lower().replace(' ', '_')}.png"
+            filename = f"outputs/confusion_matrix_{model_name.lower().replace(' ', '_')}.png"
             plt.savefig(filename)
             plt.close()
 
