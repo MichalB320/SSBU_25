@@ -1,5 +1,8 @@
 import warnings
 
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
+
 # Suppress specific FutureWarnings from scikit-learn
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -19,10 +22,16 @@ def initialize_models_and_params():
     - param_grids: dict, dictionary of hyperparameter grids.
     """
     models = {
-        "Logistic Regression": LogisticRegression(solver='liblinear')
+        "Logistic Regression": LogisticRegression(solver='liblinear'),
+        "Support Vector Machine": SVC(),
     }
     param_grids = {
-        "Logistic Regression": {"C": [0.1, 1, 10], "max_iter": [10000]}
+        "Logistic Regression": {"C": [0.1, 1, 10], "max_iter": [10000]},
+        "Support Vector Machine": {
+            "C": [0.1, 1, 10],
+            "gamma": ['scale', 'auto'],
+            "kernel": ["linear", "rbf"]
+        },
     }
     return models, param_grids
 

@@ -14,7 +14,10 @@ Pridajte do kódu ďalší model strojového učenia (ľubovoľný), a taktiež 
 
 **Uveďte aký ML model a hodnoty jeho parametrov ste použili:**
 
-#TODO - Popis
+použil som Support Vector Machine (SVM) s parametrami:
+    C:[0.1, 1, 10], 
+    gamma: ['scale', 'auto'],
+    kernel: ["linear", "rbf"]
 
 ### Úloha 2 (2b)
 
