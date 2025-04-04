@@ -29,7 +29,7 @@ Doplnil som precision metriku
 
 ### Úloha 3 (1b)
 
-Do implementácie pridajte ukladanie všetkých grafov, ktoré sa vytvárajú pri behu skriptu `main.py`` v adresári `machine_learning`.
+Do implementácie pridajte ukladanie všetkých grafov, ktoré sa vytvárajú pri behu skriptu `main.py` v adresári `machine_learning`.
 
 ### Úloha 4 (1b)
 

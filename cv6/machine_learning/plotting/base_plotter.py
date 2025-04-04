@@ -1,3 +1,5 @@
+from math import trunc
+
 from matplotlib import pyplot as plt
 from typing import Callable
 
@@ -19,7 +21,12 @@ class BasePlotter:
         plot_func(*args, **kwargs)
         self.__apply_plot_labels(general_kwargs)
         plt.tight_layout()
-        plt.show()
+        # show = True
+        # if show:
+        #     plt.show()
+        # else:
+        #     plt.savefig(f"density_{plt.title}.png")
+        #     plt.close()
 
     def __apply_plot_labels(self, general_kwargs):
         """

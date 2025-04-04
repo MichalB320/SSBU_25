@@ -1,5 +1,7 @@
 import seaborn as sns
 from matplotlib import pyplot as plt
+from matplotlib.pyplot import title
+
 from plotting.base_plotter import BasePlotter
 
 
@@ -28,6 +30,9 @@ class ExperimentPlotter(BasePlotter):
                 ylabel='Density',
                 figsize=(10, 6)
             )
+            filename = f"output/density{metric.title()}.png"
+            plt.savefig(filename)
+            plt.close()
 
     def plot_evaluation_metric_over_replications(self, all_metric_results, title, metric_name):
         """
@@ -54,6 +59,9 @@ class ExperimentPlotter(BasePlotter):
             ylabel=metric_name,
             figsize=(10, 5)
         )
+        filename = f"output/{title.lower().replace(" ", "_")}.png"
+        plt.savefig(filename)
+        plt.close()
 
     def plot_confusion_matrices(self, confusion_matrices):
         """
@@ -75,6 +83,9 @@ class ExperimentPlotter(BasePlotter):
                 ylabel='True label',
                 figsize=(6, 5)
             )
+            filename = f"output/confusion_matrix_{model_name.lower().replace(' ', '_')}.png"
+            plt.savefig(filename)
+            plt.close()
 
     def print_best_parameters(self, results):
         """
